@@ -7,9 +7,9 @@ class Video(Model):
         max_length=256
     )
 
-    video = FileField(
-        'Видео',
-        upload_to='videos/'
+    video = CharField(
+        'Ссылка на видео',
+        max_length=4096
     )
 
     def __str__(self):
