@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.pagination import *
 from rest_framework.status import *
 from .serializers import (
     ClientSerializer,
@@ -9,6 +10,11 @@ from .serializers import (
 from apps.clients.models import Client
 from apps.tours.models import Tour
 from apps.videos.models import Video
+
+class CustomPagination(PageNumberPagination):
+    page_size = 3
+    page_size_query_param = 'page_size'
+    max_page_size = 100
 
 class ClientAPIView(APIView):
 
