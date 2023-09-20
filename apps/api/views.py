@@ -11,11 +11,6 @@ from apps.clients.models import Client
 from apps.tours.models import Tour
 from apps.videos.models import Video
 
-class CustomPagination(PageNumberPagination):
-    page_size = 3
-    page_size_query_param = 'page_size'
-    max_page_size = 100
-
 class ClientAPIView(APIView):
 
     def post(self, request):

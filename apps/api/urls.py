@@ -9,7 +9,7 @@ from .views import (
 urlpatterns = [
     # Token 
     path('token/', TokenObtainPairView.as_view(), name='token_ontain_pair'),
-    path('token/refresh', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     # Datas
     path('client/', ClientAPIView.as_view(), name='client'),   
