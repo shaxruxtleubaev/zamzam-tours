@@ -33,6 +33,11 @@ class Tour(Model):
         max_length=256
     )
 
+    date = CharField(
+        'Дата тура',
+        max_length=256
+    )
+
     def __str__(self):
         return f'{self.name}'
     
